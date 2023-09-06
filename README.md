@@ -18,5 +18,5 @@ temperature, humidity, air quality, sunrise, and sunset times. It is designed as
 - CSS
 - JavaScript
 ## Configuration <br />
-- OpenWeatherMap API - replace *apiKey* variable in **script.js** with your valid OpenWeatherMap API key, as well as *id* in *apiUrl* variable.
+- OpenWeatherMap API - replace *apiKey* variable in **script.js** with your valid OpenWeatherMap API key, as well as *id* in *apiUrl* variable with your valid location ID.
 - ESP32 Data Endpoint - update *servUrl* variable in **script.js** with the correct endpoint where your device serves sensor data.
