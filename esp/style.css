@@ -1,0 +1,195 @@
+/* Reset defalt styles and apply a background image */
+body {
+    font-family: Arial, sans-serif;
+    /* background-color: #f4f4f4; */
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the entire page */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    text-align: center;
+    /* overflow: auto; */
+    /* margin: 20px;  */
+}
+
+/* Heading styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    /* border: 1px solid #ccc;  */
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+}
+
+/* Table row hover effect */
+tr {
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+tr:hover {
+    transform: scale(1.05);
+}
+
+/* Ever second row has an alternative background color */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Flexbox layout for additional weather information */
+.additional-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-top: 20px 40px; */
+}
+
+/* Loading indicator styles */
+.loading-indicator {
+    display: none; /* Initially hide the loading indicator */
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999; /*Ensure it appears above other content */
+}
+
+.loading-indicator i {
+    font-size: 32px;
+    margin-right: 10px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Error notification container */
+.error {
+    position: fixed;
+    bottom: -100%; /* Starting off-screen at the bottom */
+    left: 50%;
+    transform: translateX(-50%); /* Horizontal centering */
+    background-color: #ff4444;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000; /*Ensure it appears above other content (not including loading indicator) */
+    text-align: center;
+}
+
+/* Show error notification */
+.error.show {
+    bottom: 60px;
+    display: block;
+    animation: slide-up 1.5s ease;
+}
+
+/* Keyframes for slide-up animation */
+@keyframes slide-up {
+    from {
+        /* transform: translateY(100%); */
+        bottom: -100%;
+    }
+    to {
+        /* transform: translateY(0); */
+        bottom: 60px;
+    }
+}
+
+/* Common styles for  the remaining icons*/
+.icon {
+    display: inline-block;
+    max-width: 100%;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Adding transition for smooth effect */
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Weather icon style */
+#weather-icon {
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+}
+
+/* Icon-specific background images */
+.id-icon {
+    background-image: url('icons/hashtag.png'); 
+}
+
+.device-icon {
+    background-image: url('icons/device.png'); 
+}
+
+.time-icon {
+    background-image: url('icons/time.png'); 
+}
+
+.temperature-icon {
+    background-image: url('icons/temp.png'); 
+}
+
+.humidity-icon {
+    background-image: url('icons/humidity.png'); 
+}
+
+.pressure-icon {
+    background-image: url('icons/pressure.png'); 
+}
+
+.sunrise-icon {
+    background-image: url('icons/sunrise.png'); 
+}
+
+.sunset-icon {
+    background-image: url('icons/sunset.png'); 
+}
